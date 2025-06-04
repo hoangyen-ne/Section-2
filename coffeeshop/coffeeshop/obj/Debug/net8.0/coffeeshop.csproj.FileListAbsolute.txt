@@ -157,12 +157,6 @@ C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\scoped
 C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\staticwebassets\msbuild.coffeeshop.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\staticwebassets\msbuild.coffeeshop.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\staticwebassets\msbuild.build.coffeeshop.props
-C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.coffeeshop.props
-C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.coffeeshop.props
-C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\staticwebassets.pack.json
 C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\coffeeshop.csproj.Up2Date
 C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\coffeeshop.dll
@@ -170,3 +164,5 @@ C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\refint
 C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\coffeeshop.pdb
 C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\coffeeshop.genruntimeconfig.cache
 C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\ref\coffeeshop.dll
+C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\coffeeshop.sourcelink.json
+C:\Users\Admin\Documents\Section-2\coffeeshop\coffeeshop\obj\Debug\net8.0\staticwebassets.build.json.cache
