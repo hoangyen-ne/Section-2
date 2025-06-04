@@ -26,7 +26,6 @@ namespace coffeeshop.Controllers
                 return View(product);
             }
             return NotFound();
-        }
-
+        }   
     }
 }
