@@ -1,22 +1,26 @@
-using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using coffeeshop.Models;
+using coffeeshop.Models.Interfaces;
+using coffeeshop.Models.Services;
+using Microsoft.AspNetCore.Mvc;
+using System.Diagnostics;
 
 namespace coffeeshop.Controllers;
 
+
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
+    private IProductRepository productRepository;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(IProductRepository productRepository)
     {
-        _logger = logger;
+        this.productRepository = productRepository;
     }
 
     public IActionResult Index()
     {
-        return View();
+        return View(productRepository.GetTrendingProducts());
     }
+
 
     public IActionResult Privacy()
     {
