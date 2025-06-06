@@ -24,7 +24,7 @@ namespace coffeeshop.Controllers
             if (product != null)
             {
                 return View(product);
-            }
+            }   
             return NotFound();
         }
         public IActionResult Trending()

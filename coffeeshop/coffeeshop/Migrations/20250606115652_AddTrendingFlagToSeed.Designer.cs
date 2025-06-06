@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using coffeeshop.Data;
 
@@ -10,9 +11,11 @@ using coffeeshop.Data;
 namespace coffeeshop.Migrations
 {
     [DbContext(typeof(CoffeeShopDbContext))]
-    partial class CoffeeShopDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250606115652_AddTrendingFlagToSeed")]
+    partial class AddTrendingFlagToSeed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,7 +45,7 @@ namespace coffeeshop.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Price")
-                        .HasColumnType("decimal(10,2)");
+                        .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
 

@@ -13,6 +13,7 @@ namespace coffeeshop.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Product>().Property(p => p.Price).HasColumnType("decimal(10,2)");
             modelBuilder.Entity<Product>().HasData(
             new Product
             {
@@ -20,8 +21,8 @@ namespace coffeeshop.Data
                 Name = "America",
                 Price = 25,
                 Detail = "Name product",
-                ImageUrl =
-           "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp"
+                ImageUrl ="https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp",
+                  IsTrendingProduct = true
             },
             new Product
             {
@@ -29,8 +30,8 @@ namespace coffeeshop.Data
                 Name = "Vietnam",
                 Price = 20,
                 Detail = "Vietnamese product",
-                ImageUrl =
-           "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp"
+                ImageUrl ="https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp",
+                  IsTrendingProduct = true
             },
             new Product
             {
@@ -38,8 +39,8 @@ namespace coffeeshop.Data
                 Name = "United Kingdom",
                 Price = 15,
                 Detail = "UK product",
-                ImageUrl =
-           "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp"
+                ImageUrl = "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp",
+                  IsTrendingProduct = true
             },
             new Product
             {
@@ -47,8 +48,8 @@ namespace coffeeshop.Data
                 Name = "India",
                 Price = 15,
                 Detail = "India product",
-                ImageUrl =
-           "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp"
+                ImageUrl = "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp",
+                  IsTrendingProduct = true
             },
             new Product
             {
@@ -56,8 +57,8 @@ namespace coffeeshop.Data
                 Name = "Russian",
                 Price = 25,
                 Detail = "Russian product",
-                ImageUrl =
-           "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp"
+                ImageUrl =  "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp",
+                  IsTrendingProduct = true
             },
             new Product
             {
@@ -65,8 +66,8 @@ namespace coffeeshop.Data
                 Name = "France",
                 Price = 35,
                 Detail = "France product",
-                ImageUrl =
-           "https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp"
+                ImageUrl ="https://insanelygoodrecipes.com/wp-content/uploads/2020/07/Cup-Of-Creamy-Coffee-1024x536.webp",
+                  IsTrendingProduct = true
             }
             );
         }

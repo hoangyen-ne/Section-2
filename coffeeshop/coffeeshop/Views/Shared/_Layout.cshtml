@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="generator" content="Mobirise v5.7.8, mobirise.com">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum￾scale=1">
-    <link rel="shortcut icon" href="assets/images/coffee-icon-sign-symbol-design￾free-png.webp" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets/images/coffee-icon-sign-symbol-design-free-png.webp" type="image/x-icon">
     <meta name="description" content="">
     <title>Home</title>
-    <link rel="stylesheet" href="~/assets/web/assets/mobirise￾icons2/mobirise2.css">
+    <link rel="stylesheet" href="~/assets/web/assets/mobirise-icons2/mobirise2.css">
     <link rel="stylesheet" href="~/assets/web/assets/mobirise-icons-bold/mobirise￾icons-bold.css">
     <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/assets/bootstrap/css/bootstrap-grid.min.css">
@@ -26,15 +26,57 @@
               href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900
 ,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap">
     </noscript>
-    <link rel="preload" as="style" href="~/assets/mobirise/css/mbradditional.css">
+    <link rel="preload" as="style" href="~/assets/mobirise/css/mbr-additional.css">
     <link rel="stylesheet" href="~/assets/mobirise/css/mbr-additional.css"
           type="text/css">
 </head>
 <body>
-    <section data-bs-version="5.1" class="menu menu3 cid-tsEQosCCDP" once="menu"
-             id="menu3-0">
-        ………………………………………………………………………………………………………………………………….
-    </section>
+    <section data-bs-version="5.1" class="menu menu3 cid-tsEQosCCDP" once="menu" id="menu3-0">
+            <nav class="navbar navbar-dropdown navbar-expand-lg">
+                <div class="container">
+                    <div class="navbar-brand">
+                        <span class="navbar-logo">
+                            <a asp-controller="Home" asp-action="Index">
+                                <img src="~/assets/images/coffee-icon-sign-symbol-design-free-png.webp" alt="Coffee shop"
+                                     style="height: 3rem;" />
+                            </a>
+
+                        </span>
+                    </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-toggle="collapse"
+                        data-target="#navbarSupportedContent" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            
+                        <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+                        <li class="nav-item">
+                            <a class="nav-link link text-black display-4" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-black display-4" asp-controller="Products" asp-action="Shop">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-black display-4" asp-controller="Contact" asp-action="Index">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link text-black display-4" asp-controller="Cart" asp-action="Index">
+                                <span class="mobi-mbri mobi-mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span> Cart
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                </div>
+
+        </nav>
+    </section>  
     @RenderBody()
     <script src="~/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/assets/parallax/jarallax.js"></script>
