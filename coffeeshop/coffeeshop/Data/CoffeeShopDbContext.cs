@@ -4,11 +4,12 @@ using Microsoft.EntityFrameworkCore;
 namespace coffeeshop.Data
 {
     public class CoffeeShopDbContext : DbContext
-    {
+    {        
         public CoffeeShopDbContext(DbContextOptions<CoffeeShopDbContext> options) : base(options)
         {
         }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
         //seed data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -71,5 +72,7 @@ namespace coffeeshop.Data
             }
             );
         }
+
+
     }
 }
