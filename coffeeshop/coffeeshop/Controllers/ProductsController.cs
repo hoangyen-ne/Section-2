@@ -13,11 +13,8 @@ namespace coffeeshop.Controllers
             _productRepository = productRepository;
         }
 
-        public IActionResult Shop()
-        {
-            var products = _productRepository.GetAllProducts();
-            return View(products);
-        }
+        
+
         public IActionResult Detail(int id)
         {
             var product = _productRepository.GetProductDetail(id);
@@ -26,6 +23,11 @@ namespace coffeeshop.Controllers
                 return View(product);
             }   
             return NotFound();
+        }
+        public IActionResult Shop()
+        {
+            var products = _productRepository.GetAllProducts();
+            return View(products);
         }
         public IActionResult Trending()
         {
