@@ -1,9 +1,9 @@
 ﻿using coffeeshop.Models;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 namespace coffeeshop.Data
 {
-    public class CoffeeShopDbContext : DbContext
+    public class CoffeeShopDbContext : IdentityDbContext
     {        
         public CoffeeShopDbContext(DbContextOptions<CoffeeShopDbContext> options) : base(options)
         {
