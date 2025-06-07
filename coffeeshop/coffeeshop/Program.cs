@@ -7,10 +7,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-//Add code
-builder.Services.AddScoped<ProductRepository, ProductRepository>();
-builder.Services.AddScoped<IShoppingCartRepository>(ShoppingCartRepository.GetCart);
+builder.Services.AddSession();
 
+//Add code
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IShoppingCartRepository>(ShoppingCartRepository.GetCart);
+builder.Services.AddHttpContextAccessor(); 
 builder.Services.AddDbContext<CoffeeShopDbContext>(option =>option.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeShopDbContextConnection")));
 
 
@@ -29,6 +31,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseSession();
 
 app.UseAuthorization();
 

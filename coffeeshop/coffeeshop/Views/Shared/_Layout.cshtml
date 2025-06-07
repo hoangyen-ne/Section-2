@@ -1,4 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@{
+    var cartCount = HttpContextAccessor?.HttpContext?.Session.GetInt32("CartCount") ??0;
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
@@ -17,12 +21,11 @@
     <link rel="stylesheet" href="~/assets/dropdown/css/style.css">
     <link rel="stylesheet" href="~/assets/socicon/css/styles.css">
     <link rel="stylesheet" href="~/assets/theme/css/style.css">
-    <link rel="preload"
-          href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900
-,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"
           as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet"
+        <link rel="stylesheet"  
               href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900
 ,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap">
     </noscript>
@@ -54,22 +57,45 @@
                         <span></span>
                     </div>
                 </button>
+
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
+
                         <li class="nav-item">
                             <a class="nav-link link text-black display-4" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link link text-black display-4" asp-controller="Products" asp-action="Shop">Shop</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link link text-black display-4" asp-controller="Contact" asp-action="Index">Contact</a>
                         </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link text-black dropdown-toggle display-4"
+                               href="#" role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                <span class="mobi-mbri mobi-mbri-user-2 mbr-iconfont mbr-iconfont-btn"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item text-black display-4" asp-controller="Account" asp-action="Register">Register</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item text-black display-4" asp-controller="Account" asp-action="Login">Login</a>
+                                </li>
+                            </ul>
+                        </li>
+
                         <li class="nav-item">
-                            <a class="nav-link link text-black display-4" asp-controller="Cart" asp-action="Index">
-                                <span class="mobi-mbri mobi-mbri-shopping-cart mbr-iconfont mbr-iconfont-btn"></span> Cart
+                            <a class="nav-link link text-black display-4" asp-controller="ShoppingCart" asp-action="Index">
+                                <span class="mobi-mbri mobi-mbri-shopping-bag mbr-iconfont mbr-iconfont-btn">
+                                    <small>(@cartCount)</small>
+                                </span>
                             </a>
                         </li>
+
                     </ul>
                 </div>
 
