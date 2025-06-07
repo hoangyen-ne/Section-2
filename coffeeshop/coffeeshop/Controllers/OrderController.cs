@@ -22,7 +22,7 @@ namespace coffeeshop.Controllers
         {
             orderRepository.PlaceOrder(order);
             shoppingCartRepository.ClearCart();
-
+            HttpContext.Session.SetInt32("CartCount", order.Id);  
             return RedirectToAction("CheckoutComplete");
         }
         public IActionResult CheckoutComplete()
