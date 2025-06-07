@@ -1,30 +1,31 @@
 ﻿using coffeeshop.Models;
-using coffeeshop.Models.Services;
+using coffeeshop.Models.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-
 namespace coffeeshop.Controllers
 {
-    public class OrderController : Controller
+    public class OrdersController : Controller
     {
-        [HttpGet]
+        private IOrderRepository orderRepository;
+        private IShoppingCartRepository shoppingCartRepository;
+        public OrdersController(IOrderRepository oderRepository,
+       IShoppingCartRepository shoppingCartRepossitory)
+        {
+            this.orderRepository = oderRepository;
+            this.shoppingCartRepository = shoppingCartRepossitory;
+        }
         public IActionResult Checkout()
         {
             return View();
         }
-
         [HttpPost]
-        public IActionResult Checkout(Checkout model)
+        public IActionResult Checkout(Order order)
         {
-            if (ModelState.IsValid)
-            {
-                TempData["Message"] = " Order placed successfully!";
-                return RedirectToAction("Checkout");
-            }
+            orderRepository.PlaceOrder(order);
+            shoppingCartRepository.ClearCart();
 
-            return View(model); 
+            return RedirectToAction("CheckoutComplete");
         }
-
-        public IActionResult Index()
+        public IActionResult CheckoutComplete()
         {
             return View();
         }
