@@ -14,6 +14,7 @@ builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IShoppingCartRepository>(ShoppingCartRepository.GetCart);
 builder.Services.AddHttpContextAccessor(); 
 builder.Services.AddDbContext<CoffeeShopDbContext>(option =>option.UseSqlServer(builder.Configuration.GetConnectionString("CoffeeShopDbContextConnection")));
+builder.Services.AddControllersWithViews();
 
 
 //Add code

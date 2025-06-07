@@ -32,9 +32,13 @@
                             </div>
                          
                             <div class="mbr-section-btn pt-3">
-                                <a href="" class="btn btn-primary display-4">
-                                    <span class="mbrib-cart-add mbr-iconfont mbr-iconfont-btn"></span>Add to cart&nbsp;
-                                </a>
+                            <a asp-controller="ShoppingCart"
+                               asp-action="AddToShoppingCart"
+                               asp-route-pId="@Model.Id"
+                               class="btn btn-primary display-4">
+                                <span class="mbrib-cart-add mbr-iconfont mbr-iconfont-btn"></span>Add to cart&nbsp;
+                            </a>
+
                             </div>
                         </div>
                     </div>

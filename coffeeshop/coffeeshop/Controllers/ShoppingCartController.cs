@@ -23,11 +23,12 @@ namespace coffeeshop.Controllers
         }
         public RedirectToActionResult AddToShoppingCart(int pId)    
         {
+
             var product = productRepository.GetAllProducts().FirstOrDefault(p => p.Id ==pId);
             if (product != null)
             {
                 shoppingCartRepository.AddToCart(product);
-                int cartCount = shoppingCartRepository.GetAllShoppingCartItems().Count();
+                int cartCount = shoppingCartRepository.GetAllShoppingCartItems().Sum(i => i.Qty);
                 HttpContext.Session.SetInt32("CartCount", cartCount);
             }
             return RedirectToAction("Index");
@@ -38,6 +39,8 @@ namespace coffeeshop.Controllers
             if (product != null)
             {
                 shoppingCartRepository.RemoveFromCart(product);
+                int cartCount = shoppingCartRepository.GetAllShoppingCartItems().Sum(i => i.Qty);
+                HttpContext.Session.SetInt32("CartCount", cartCount);
             }
             return RedirectToAction("Index");
         }
